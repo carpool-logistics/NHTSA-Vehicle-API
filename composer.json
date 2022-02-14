@@ -1,5 +1,5 @@
 {
-    "name": "biegalski-llc/nhtsa-vehicle-api",
+    "name": "carpool-logistics/nhtsa-vehicle-api",
     "type": "library",
     "description": "A package to consume the National Highway Traffic Safety Administration (NHSTA) Vehicles API for decoding VINs and pulling lists of Vehicle Year, Make and Model.",
     "keywords": [
