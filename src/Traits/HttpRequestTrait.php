@@ -41,6 +41,32 @@ trait HttpRequestTrait
         }
     }
 
+    public function httpPostRequest(string $url, string $data)
+    {
+        try {
+
+            $this->client = new Client();
+
+            $response = $this->client->request(
+                'POST',
+                $url,
+                [
+                    'form_params' => [
+                        'DATA' => $data,
+                        'format' => 'json'
+                    ]
+                ]
+            );
+
+            return json_decode($response->getBody(), true);
+
+        } catch (GuzzleException $e) {
+
+            return $e->getMessage();
+
+        }
+    }
+
     /**
      * @param string $url
      * @param array $variables

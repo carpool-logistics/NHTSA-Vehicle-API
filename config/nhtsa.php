@@ -2,7 +2,8 @@
 
 return [
     'decode' => [
-        'vin' => 'https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/:VIN'
+        'vin' => 'https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/:VIN',
+        'bulk' => 'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch'
     ],
     'list' => [
         'makes' => 'https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json',

@@ -56,6 +56,16 @@ class VehicleApi
     }
 
     /**
+     * @param string $vin
+     * @return mixed|string
+     * @throws GuzzleException
+     */
+    public function bulkDecodeVins(string $vins)
+    {
+        return $this->vin->decodeVinBulk($vins);
+    }
+
+    /**
      * @param int $earliestYear
      * @return array
      */

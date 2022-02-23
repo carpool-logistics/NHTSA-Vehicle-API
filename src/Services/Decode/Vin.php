@@ -43,4 +43,20 @@ class Vin extends Service
 
         return $response;
     }
+
+    /**
+     * @param string $vin
+     * @return mixed|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function decodeVinBulk(string $vins)
+    {
+        $response = $this->httpPostRequest($this->config['decode']['bulk'], $vins);
+
+        if( isset($response['Results']) ){
+            return $response['Results'];
+        }
+
+        return $response;
+    }
 }
