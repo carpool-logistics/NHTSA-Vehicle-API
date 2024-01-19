@@ -2,7 +2,7 @@
 
 return [
     'decode' => [
-        'vin' => 'https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/:VIN',
+        'vin' => 'https://vpic.carpoollogistics.com/api/vehicles/decodevin/:VIN',
         'bulk' => 'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch'
     ],
     'list' => [
